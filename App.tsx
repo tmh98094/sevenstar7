@@ -10,6 +10,7 @@ import BlogList from './pages/BlogList';
 import BlogDetail from './pages/BlogDetail';
 import GameLibrary from './pages/GameLibrary';
 import FloatingCTA from './components/FloatingCTA';
+import MobileBottomNav from './components/MobileBottomNav';
 import { LanguageProvider } from './src/contexts/LanguageContext';
 
 const ScrollToTop = () => {
@@ -43,6 +44,7 @@ const AppContent: React.FC = () => {
 
       <Footer />
       <FloatingCTA />
+      <MobileBottomNav />
     </div>
   );
 };
