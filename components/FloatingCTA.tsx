@@ -46,7 +46,7 @@ const FloatingCTA: React.FC = () => {
           {isCroco ? `${t('ui.play')} CROCO` : t('ui.playNow')} <ArrowRight size={16} />
         </span>
         <span className="text-[9px] text-gray-400 font-bold uppercase tracking-widest leading-none">
-          Official Partner Link
+          {t('ui.officialPartnerLink')}
         </span>
       </div>
     </a>

@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Gamepad2, Search, Filter, Flame, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 import { FEATURED_GAMES, GAME_CATEGORIES, CROCO_GAMES, SLOT_GAMES, SLOT_PROVIDERS, LIVE_GAMES, SPORTS_GAMES } from '../constants';
 import GameShowcaseCard from '../components/GameShowcaseCard';
+import { useTranslation } from '../src/hooks/useTranslation';
 
 const GameLibrary: React.FC = () => {
+    const { t } = useTranslation();
     const [viewMode, setViewMode] = useState<'games' | 'providers'>('games');
     const [activeCategory, setActiveCategory] = useState<string>('all');
     const [searchTerm, setSearchTerm] = useState('');
@@ -87,9 +89,9 @@ const GameLibrary: React.FC = () => {
     }, [activeCategory, searchTerm]);
 
     const categories = [
-        { id: 'all', label: 'All Games', icon: null },
-        { id: 'popular', label: 'Popular', icon: Flame },
-        { id: 'new', label: 'New', icon: Sparkles },
+        { id: 'all', label: t('gameLibrary.allGames'), icon: null },
+        { id: 'popular', label: t('gameLibrary.popular'), icon: Flame },
+        { id: 'new', label: t('gameLibrary.new'), icon: Sparkles },
         ...Object.values(GAME_CATEGORIES).map(c => ({ id: c.id, label: c.title, icon: null }))
     ];
 
@@ -99,10 +101,10 @@ const GameLibrary: React.FC = () => {
 
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <span className="text-brand-gold font-bold tracking-widest uppercase text-xs mb-2 block">Complete Catalog</span>
-                    <h1 className="text-4xl md:text-6xl font-display font-black text-white mb-6">Game Library</h1>
+                    <span className="text-brand-gold font-bold tracking-widest uppercase text-xs mb-2 block">{t('ui.completeCatalog')}</span>
+                    <h1 className="text-4xl md:text-6xl font-display font-black text-white mb-6">{t('ui.gameLibrary')}</h1>
                     <p className="text-gray-400 max-w-2xl mx-auto">
-                        Explore our complete collection of over 1,000+ verified high-RTP games from world-class providers.
+                        {t('ui.exploreCollection')}
                     </p>
                 </div>
 
@@ -140,7 +142,7 @@ const GameLibrary: React.FC = () => {
                                     : 'text-gray-400 hover:text-white'
                                     }`}
                             >
-                                Games
+                                {t('gameLibrary.viewGames')}
                             </button>
                             <button
                                 onClick={() => setViewMode('providers')}
@@ -149,7 +151,7 @@ const GameLibrary: React.FC = () => {
                                     : 'text-gray-400 hover:text-white'
                                     }`}
                             >
-                                Providers
+                                {t('gameLibrary.viewProviders')}
                             </button>
                         </div>
                     )}
@@ -159,7 +161,7 @@ const GameLibrary: React.FC = () => {
                         <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" size={16} />
                         <input
                             type="text"
-                            placeholder="Search games..."
+                            placeholder={t('gameLibrary.searchPlaceholder')}
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                             className="w-full bg-black/40 border border-white/10 rounded-xl py-2 pl-10 pr-4 text-sm text-white focus:outline-none focus:border-brand-gold/50"
@@ -176,7 +178,7 @@ const GameLibrary: React.FC = () => {
                     ) : (
                         <div className="col-span-full text-center py-20 text-gray-500">
                             <Gamepad2 size={48} className="mx-auto mb-4 opacity-20" />
-                            <p>No games found matching your criteria.</p>
+                            <p>{t('gameLibrary.noResults')}</p>
                         </div>
                     )}
                 </div>

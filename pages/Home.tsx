@@ -132,11 +132,11 @@ const Home: React.FC = () => {
             >
               <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-gold/10 border border-brand-gold/20 rounded-full text-brand-gold font-black text-[10px] uppercase tracking-widest mx-auto lg:mx-0 backdrop-blur-sm">
                 <ShieldCheck size={14} className="animate-pulse" />
-                <span>Official Licensed Casino Malaysia</span>
+                <span>{t('ui.officialLicensed')}</span>
               </motion.div>
 
               <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl lg:text-9xl font-display font-black text-white leading-[0.9] tracking-tighter drop-shadow-2xl">
-                UNMATCHED <br />
+                {t('ui.unmatched')} <br />
                 <motion.span
                   className="gold-text-gradient inline-block relative"
                   animate={{
@@ -145,9 +145,9 @@ const Home: React.FC = () => {
                   }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  7-STAR
+                  {t('ui.sevenStar')}
                 </motion.span> <br />
-                EXPERIENCE
+                {t('ui.experience')}
               </motion.h1>
 
               <motion.p variants={fadeInUp} className="text-gray-400 text-sm md:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
@@ -167,17 +167,17 @@ const Home: React.FC = () => {
               <motion.div variants={fadeInUp} className="pt-8 flex flex-wrap gap-x-6 gap-y-3 justify-center lg:justify-start items-center opacity-80">
                 <div className="flex items-center gap-2">
                   <ShieldCheck size={14} className="text-green-500" />
-                  <span className="text-[10px] uppercase font-bold text-gray-400">PAGCOR Licensed</span>
+                  <span className="text-[10px] uppercase font-bold text-gray-400">{t('ui.pagcorLicensed')}</span>
                 </div>
                 <div className="w-px h-3 bg-white/10"></div>
                 <div className="flex items-center gap-2">
                   <BadgeCheck size={14} className="text-blue-400" />
-                  <span className="text-[10px] uppercase font-bold text-gray-400">BMM Audited</span>
+                  <span className="text-[10px] uppercase font-bold text-gray-400">{t('ui.bmmAudited')}</span>
                 </div>
                 <div className="w-px h-3 bg-white/10"></div>
                 <div className="flex items-center gap-2">
                   <Zap size={14} className="text-brand-gold" />
-                  <span className="text-[10px] uppercase font-bold text-gray-400">3-Min Withdrawals</span>
+                  <span className="text-[10px] uppercase font-bold text-gray-400">{t('ui.fastWithdrawals')}</span>
                 </div>
               </motion.div>
             </motion.div>

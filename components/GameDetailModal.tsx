@@ -10,8 +10,15 @@ interface GameDetailModalProps {
     onClose: () => void;
 }
 
+import { useTranslation } from '../src/hooks/useTranslation';
+
 const GameDetailModal: React.FC<GameDetailModalProps> = ({ game, onClose }) => {
+    const { t } = useTranslation();
     if (!game) return null;
+
+    const volatilityKey = game.volatility ? game.volatility.toLowerCase().replace(' ', '') : 'high';
+    // Map 'veryhigh' to 'veryHigh' for matching keys if needed
+    const mappedVolatilityKey = volatilityKey === 'veryhigh' ? 'veryHigh' : volatilityKey;
 
     return (
         <AnimatePresence>
@@ -38,7 +45,7 @@ const GameDetailModal: React.FC<GameDetailModalProps> = ({ game, onClose }) => {
                     </button>
 
                     <div className="flex flex-col md:flex-row h-full">
-                        {/* Left: Image & CTA */} //
+                        {/* Left: Image & CTA */}
                         <div className="w-full md:w-2/5 relative h-64 md:h-auto">
                             <img
                                 src={game.imageUrl}
@@ -53,34 +60,34 @@ const GameDetailModal: React.FC<GameDetailModalProps> = ({ game, onClose }) => {
                             <div className="mb-6">
                                 <span className="text-brand-gold text-xs font-bold uppercase tracking-wider mb-2 block">{game.provider}</span>
                                 <h2 className="text-3xl font-display font-black text-white leading-tight mb-2">{game.title}</h2>
-                                <p className="text-gray-400 text-sm">{game.description || `Experience the thrill of ${game.title} by ${game.provider}. High quality graphics and immersive gameplay.`}</p>
+                                <p className="text-gray-400 text-sm">{game.description || `${t('categoryPage.about')} ${game.title} by ${game.provider}.`}</p>
                             </div>
 
                             <div className="grid grid-cols-2 gap-4 mb-8">
                                 <div className="bg-white/5 p-3 rounded-lg border border-white/5">
                                     <div className="flex items-center gap-2 text-gray-400 text-xs uppercase mb-1">
-                                        <BarChart3 size={14} /> RTP
+                                        <BarChart3 size={14} /> {t('ui.rtp')}
                                     </div>
                                     <div className="text-brand-gold font-bold">{game.rtp || '97.5%'}</div>
                                 </div>
                                 <div className="bg-white/5 p-3 rounded-lg border border-white/5">
                                     <div className="flex items-center gap-2 text-gray-400 text-xs uppercase mb-1">
-                                        <Zap size={14} /> Volatility
+                                        <Zap size={14} /> {t('ui.volatility')}
                                     </div>
-                                    <div className="text-white font-bold">{game.volatility || 'High'}</div>
+                                    <div className="text-white font-bold">{t(`ui.${mappedVolatilityKey}`) || game.volatility || t('ui.high')}</div>
                                 </div>
                                 <div className="bg-white/5 p-3 rounded-lg border border-white/5">
                                     <div className="flex items-center gap-2 text-gray-400 text-xs uppercase mb-1">
-                                        <Trophy size={14} /> Max Win
+                                        <Trophy size={14} /> {t('ui.maxWin')}
                                     </div>
                                     <div className="text-white font-bold">{game.maxWin || 'x5000'}</div>
                                 </div>
                                 {game.category === 'Exclusive' && (
                                     <div className="bg-brand-gold/10 p-3 rounded-lg border border-brand-gold/20">
                                         <div className="flex items-center gap-2 text-brand-gold text-xs uppercase mb-1">
-                                            <Info size={14} /> Status
+                                            <Info size={14} /> {t('ui.status')}
                                         </div>
-                                        <div className="text-brand-gold font-bold">VIP Only</div>
+                                        <div className="text-brand-gold font-bold">{t('ui.vipOnly')}</div>
                                     </div>
                                 )}
                             </div>
@@ -93,7 +100,7 @@ const GameDetailModal: React.FC<GameDetailModalProps> = ({ game, onClose }) => {
                                     target="_blank"
                                     className="flex-1 bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-lg shadow-green-900/20"
                                 >
-                                    <Play size={18} fill="currentColor" /> PLAY NOW
+                                    <Play size={18} fill="currentColor" /> {t('ui.playNow')}
                                 </TrackedLink>
                                 {/* Demo Button (Optional, can be added later) */}
                             </div>

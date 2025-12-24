@@ -5,8 +5,10 @@ import { EXTERNAL_LINK, CROCO_GAMES } from '../constants';
 import GameShowcaseCard from '../components/GameShowcaseCard';
 import SEO from '../components/SEO';
 import TrackedLink from '../components/TrackedLink';
+import { useTranslation } from '../src/hooks/useTranslation';
 
 const CrocoExclusive: React.FC = () => {
+    const { t } = useTranslation();
     const [currentPage, setCurrentPage] = useState(0);
 
     // Pagination: 6 games per page
@@ -66,7 +68,7 @@ const CrocoExclusive: React.FC = () => {
                         className="mb-8"
                     >
                         <div className="inline-flex items-center gap-2 bg-green-900/50 border border-green-500/30 px-6 py-2 rounded-full text-green-400 font-bold animate-pulse">
-                            <Crown size={18} /> OFFICIAL EXCLUSIVE PARTNER
+                            <Crown size={18} /> {t('crocoExclusive.officialPartner')}
                         </div>
                     </motion.div>
 
@@ -85,8 +87,7 @@ const CrocoExclusive: React.FC = () => {
                     </motion.div>
 
                     <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed mb-12 font-medium">
-                        SevenStar7 is the **sole authorized distributor** of Croco Gaming in Malaysia.
-                        Experience high-volatility slots and arcade games that you cannot find anywhere else.
+                        {t('crocoExclusive.heroPitch').split('**').map((part, i) => i % 2 === 1 ? <strong key={i}>{part}</strong> : part)}
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-6">
@@ -97,7 +98,7 @@ const CrocoExclusive: React.FC = () => {
                             rel="noreferrer"
                             className="bg-green-600 hover:bg-green-500 text-white text-lg font-black py-5 px-12 rounded-xl shadow-[0_0_50px_rgba(22,163,74,0.4)] transition-all hover:scale-105 active:scale-95 flex items-center gap-3 uppercase tracking-widest"
                         >
-                            Start Winning Now <ArrowRight size={20} />
+                            {t('ui.startWinningNow')} <ArrowRight size={20} />
                         </TrackedLink>
                     </div>
                 </div>
@@ -109,18 +110,18 @@ const CrocoExclusive: React.FC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="bg-brand-dark p-8 rounded-2xl border border-green-900/50 shadow-xl">
                             <Sparkles className="text-green-500 mb-6" size={40} />
-                            <h3 className="text-2xl font-bold text-white mb-4">Higher RTP</h3>
-                            <p className="text-gray-400">Croco Gaming titles on SevenStar7 feature an exclusive Return-To-Player rate of 98.5%, significantly higher than the industry standard.</p>
+                            <h3 className="text-2xl font-bold text-white mb-4">{t('crocoExclusive.higherRtpTitle')}</h3>
+                            <p className="text-gray-400">{t('crocoExclusive.higherRtpDesc')}</p>
                         </div>
                         <div className="bg-brand-dark p-8 rounded-2xl border border-green-900/50 shadow-xl">
                             <Trophy className="text-green-500 mb-6" size={40} />
-                            <h3 className="text-2xl font-bold text-white mb-4">Daily Tournaments</h3>
-                            <p className="text-gray-400">Participate in daily leaderboards automatically when you play any Croco game. Prize pools up to MYR 50,000 daily.</p>
+                            <h3 className="text-2xl font-bold text-white mb-4">{t('crocoExclusive.dailyTournamentsTitle')}</h3>
+                            <p className="text-gray-400">{t('crocoExclusive.dailyTournamentsDesc')}</p>
                         </div>
                         <div className="bg-brand-dark p-8 rounded-2xl border border-green-900/50 shadow-xl">
                             <Target className="text-green-500 mb-6" size={40} />
-                            <h3 className="text-2xl font-bold text-white mb-4">Arcade Mechanics</h3>
-                            <p className="text-gray-400">Not just slots—skill-based arcade shooting and adventure games where your decisions impact your winnings.</p>
+                            <h3 className="text-2xl font-bold text-white mb-4">{t('crocoExclusive.arcadeMechanicsTitle')}</h3>
+                            <p className="text-gray-400">{t('crocoExclusive.arcadeMechanicsDesc')}</p>
                         </div>
                     </div>
                 </div>
@@ -131,11 +132,11 @@ const CrocoExclusive: React.FC = () => {
                 <div className="container mx-auto px-6">
                     <div className="flex justify-between items-end mb-12">
                         <div>
-                            <h2 className="text-4xl font-display font-bold text-white mb-2">Exclusive Titles</h2>
-                            <p className="text-gray-500">Only available on SevenStar7</p>
+                            <h2 className="text-4xl font-display font-bold text-white mb-2">{t('crocoExclusive.exclusiveTitles')}</h2>
+                            <p className="text-gray-500">{t('crocoExclusive.onlyOnSevenstar')}</p>
                         </div>
                         <TrackedLink href={EXTERNAL_LINK} eventName="view_all_croco" target="_blank" className="text-green-500 font-bold flex items-center gap-2 hover:underline">
-                            See All <ArrowRight size={20} />
+                            {t('ui.seeAll')} <ArrowRight size={20} />
                         </TrackedLink>
                     </div>
                     <div className="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4">
@@ -152,17 +153,17 @@ const CrocoExclusive: React.FC = () => {
                                 disabled={currentPage === 0}
                                 className="px-6 py-2 rounded-lg bg-white/5 text-white font-bold text-sm uppercase tracking-wider hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                             >
-                                ← Prev
+                                ← {t('crocoExclusive.prev')}
                             </button>
                             <span className="text-gray-400 text-sm font-bold">
-                                Page {currentPage + 1} of {totalPages}
+                                {t('gameLibrary.page')} {currentPage + 1} {t('gameLibrary.of')} {totalPages}
                             </span>
                             <button
                                 onClick={() => setCurrentPage(p => Math.min(totalPages - 1, p + 1))}
                                 disabled={currentPage === totalPages - 1}
                                 className="px-6 py-2 rounded-lg bg-white/5 text-white font-bold text-sm uppercase tracking-wider hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                             >
-                                Next →
+                                {t('crocoExclusive.next')} →
                             </button>
                         </div>
                     )}
@@ -172,7 +173,7 @@ const CrocoExclusive: React.FC = () => {
             {/* Mini FAQ */}
             <section className="py-20 bg-brand-black">
                 <div className="container mx-auto px-6 max-w-4xl">
-                    <h2 className="text-3xl font-display font-black text-white mb-12 text-center">Common Questions</h2>
+                    <h2 className="text-3xl font-display font-black text-white mb-12 text-center">{t('ui.commonQuestions')}</h2>
                     <div className="space-y-4">
                         {[
                             { q: "Is Croco Gaming fair?", a: "Yes. Croco Gaming is certified by BMM Testlabs. As an exclusive partner, we guarantee the integrity of every spin with visible RTP stats." },

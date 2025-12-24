@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
           {/* Brand & Mission */}
           <div className="space-y-8">
             <img
-              src="/images/Sevenstar Logo.png"
+              src="https://i.ibb.co/LzrMf595/Gemini-Generated-Image-dt08xtdt08xtdt08-Photo-Grid.png"
               alt="SevenStar7"
               className="h-20 w-auto object-contain"
             />

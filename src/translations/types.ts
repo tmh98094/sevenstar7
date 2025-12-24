@@ -33,13 +33,15 @@ export interface TestimonialTranslations {
 }
 
 export interface BlogTranslations {
-  [blogId: string]: {
-    title: string;
-    excerpt: string;
-    content: string;
-    category: string;
-    tags: string[];
-  };
+  [blogId: string]: any;
+  insightsGuides: string;
+  testLuckTitle: string;
+  testLuckSubtitle: string;
+  relatedGuides: string;
+  back: string;
+  shareThisGuide: string;
+  articleNotFound: string;
+  articleNotFoundDesc: string;
 }
 
 export interface UITranslations {
@@ -137,6 +139,15 @@ export interface UITranslations {
   faqTitle: string;
   viewAllText: string;
   googleTranslated: string;
+  vipOnly: string;
+  officialPartnerLink: string;
+  officialLicensed: string;
+  unmatched: string;
+  sevenStar: string;
+  experience: string;
+  pagcorLicensed: string;
+  bmmAudited: string;
+  fastWithdrawals: string;
 }
 
 export interface AchievementTranslations {
@@ -188,6 +199,107 @@ export interface FooterTranslations {
   copyright: string;
 }
 
+export interface GameLibraryTranslations {
+  allGames: string;
+  popular: string;
+  new: string;
+  searchPlaceholder: string;
+  viewGames: string;
+  viewProviders: string;
+  noResults: string;
+  page: string;
+  of: string;
+}
+
+export interface CrocoExclusiveTranslations {
+  officialPartner: string;
+  heroPitch: string;
+  soleAuthorized: string;
+  exclusiveTitles: string;
+  onlyOnSevenstar: string;
+  higherRtpTitle: string;
+  higherRtpDesc: string;
+  dailyTournamentsTitle: string;
+  dailyTournamentsDesc: string;
+  arcadeMechanicsTitle: string;
+  arcadeMechanicsDesc: string;
+  prev: string;
+  next: string;
+}
+
+export interface PartnerProgramTranslations {
+  heroTitle: string;
+  heroSubtitle: string;
+  partnerBenefits: string;
+  calculateEarnings: string;
+  calculateSubtitle: string;
+  benefit1Title: string;
+  benefit1Desc: string;
+  benefit2Title: string;
+  benefit2Desc: string;
+  benefit3Title: string;
+  benefit3Desc: string;
+  benefit4Title: string;
+  benefit4Desc: string;
+  commissionFormula: string;
+  subPartnerPlan: string;
+  subPartnerDesc: string;
+  whySevenstar: string;
+  paymentTerms: string;
+  totalTurnover: string;
+  totalNetLoss: string;
+  yourTierRate: string;
+  estimatedIncome: string;
+  calculatorNote1: string;
+  calculatorNote2: string;
+}
+
+export interface VIPPageTranslations {
+  heroTitle: string;
+  heroSubtitle: string;
+  requirement: string;
+  inviteOnly: string;
+  priorityWithdrawal: string;
+  dedicatedManager: string;
+  higherLimits: string;
+  birthdayGifts: string;
+  luxuryTrips: string;
+  joinElite: string;
+  trackingDesc: string;
+}
+
+export interface PromotionTranslations {
+  heroTitle: string;
+  heroSubtitle: string;
+  promoCode: string;
+  claimNow: string;
+  termsTitle: string;
+  term1: string;
+  term2: string;
+  term3: string;
+  term4: string;
+  titles: {
+    welcome: string;
+    reload: string;
+    rescue: string;
+    birthday: string;
+  };
+  descriptions: {
+    welcome: string;
+    reload: string;
+    rescue: string;
+    birthday: string;
+  };
+}
+
+export interface CategoryPageTranslations {
+  about: string;
+  whyPlay: string;
+  availableProviders: string;
+  readyToStart: string;
+  popularTitles: string;
+}
+
 export interface Translations {
   nav: NavTranslations;
   games: GameTranslations;
@@ -198,6 +310,12 @@ export interface Translations {
   achievements: AchievementTranslations;
   faq: FAQTranslations;
   footer: FooterTranslations;
+  gameLibrary: GameLibraryTranslations;
+  crocoExclusive: CrocoExclusiveTranslations;
+  partnerProgram: PartnerProgramTranslations;
+  vip: VIPPageTranslations;
+  promotions: PromotionTranslations;
+  categoryPage: CategoryPageTranslations;
 }
 
 export interface LanguageContextType {

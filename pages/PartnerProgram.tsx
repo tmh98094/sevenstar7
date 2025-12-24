@@ -1,8 +1,10 @@
 import React from 'react';
 import { Users, TrendingUp, ShieldCheck, DollarSign, PieChart, CheckCircle2 } from 'lucide-react';
 import { EXTERNAL_LINK } from '../constants';
+import { useTranslation } from '../src/hooks/useTranslation';
 
 const CommissionCalculator: React.FC = () => {
+    const { t } = useTranslation();
     const [turnover, setTurnover] = React.useState(100000);
     const [netWin, setNetWin] = React.useState(15000);
 
@@ -22,7 +24,7 @@ const CommissionCalculator: React.FC = () => {
         <div className="bg-brand-black/50 p-6 md:p-8 rounded-2xl border border-white/5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div>
-                    <label className="block text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">Total Monthly Turnover (MYR)</label>
+                    <label className="block text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">{t('partnerProgram.totalTurnover')}</label>
                     <input
                         type="range"
                         min="0"
@@ -35,7 +37,7 @@ const CommissionCalculator: React.FC = () => {
                     <div className="mt-2 text-white font-black text-xl">{turnover.toLocaleString()}</div>
                 </div>
                 <div>
-                    <label className="block text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">Total Net Loss (MYR)</label>
+                    <label className="block text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">{t('partnerProgram.totalNetLoss')}</label>
                     <input
                         type="range"
                         min="0"
@@ -51,11 +53,11 @@ const CommissionCalculator: React.FC = () => {
 
             <div className="flex flex-col md:flex-row items-center justify-between bg-white/5 p-6 rounded-xl border border-white/5">
                 <div className="text-center md:text-left mb-4 md:mb-0">
-                    <div className="text-gray-400 text-xs uppercase mb-1">Your Tier Rate</div>
+                    <div className="text-gray-400 text-xs uppercase mb-1">{t('partnerProgram.yourTierRate')}</div>
                     <div className="text-2xl font-black text-white">{(rate * 100).toFixed(0)}%</div>
                 </div>
                 <div className="text-center md:text-right">
-                    <div className="text-brand-gold text-xs uppercase mb-1 font-bold">Estimated Monthly Income</div>
+                    <div className="text-brand-gold text-xs uppercase mb-1 font-bold">{t('partnerProgram.estimatedIncome')}</div>
                     <div className="text-4xl font-black text-brand-gold">MYR {commission.toLocaleString(undefined, { maximumFractionDigits: 0 })}</div>
                 </div>
             </div>
@@ -67,6 +69,7 @@ import SEO from '../components/SEO';
 import TrackedLink from '../components/TrackedLink';
 
 const PartnerProgram: React.FC = () => {
+    const { t } = useTranslation();
     const affiliateSchema = {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -90,9 +93,9 @@ const PartnerProgram: React.FC = () => {
             {/* Hero */}
             <div className="bg-gradient-to-b from-brand-gold/10 to-brand-black py-20 text-center px-4">
                 <Users className="w-20 h-20 text-brand-gold mx-auto mb-6 animate-pulse" />
-                <h1 className="text-4xl md:text-6xl font-display font-black text-white mb-4">SevenStar Partner Program</h1>
+                <h1 className="text-4xl md:text-6xl font-display font-black text-white mb-4">{t('partnerProgram.heroTitle')}</h1>
                 <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                    A profit-sharing system designed specifically for players. Earn lifetime commissions.
+                    {t('partnerProgram.heroSubtitle')}
                 </p>
             </div>
 
@@ -100,13 +103,13 @@ const PartnerProgram: React.FC = () => {
 
                 {/* Benefits Grid */}
                 <section>
-                    <h2 className="text-3xl font-display font-black text-white mb-8 text-center">Partner Benefits</h2>
+                    <h2 className="text-3xl font-display font-black text-white mb-8 text-center">{t('partnerProgram.partnerBenefits')}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
-                            { title: "Dedicated Dashboard", desc: "View performance and profit in real time", icon: PieChart },
-                            { title: "Auto Settlement", desc: "System payout, safe and fast", icon: ShieldCheck },
-                            { title: "Flexible Model", desc: "No restrictions, grow freely", icon: TrendingUp },
-                            { title: "Sustainable Income", desc: "Expand sub-partners, enjoy lifetime bonus", icon: DollarSign }
+                            { title: t('partnerProgram.benefit1Title'), desc: t('partnerProgram.benefit1Desc'), icon: PieChart },
+                            { title: t('partnerProgram.benefit2Title'), desc: t('partnerProgram.benefit2Desc'), icon: ShieldCheck },
+                            { title: t('partnerProgram.benefit3Title'), desc: t('partnerProgram.benefit3Desc'), icon: TrendingUp },
+                            { title: t('partnerProgram.benefit4Title'), desc: t('partnerProgram.benefit4Desc'), icon: DollarSign }
                         ].map((item, i) => (
                             <div key={i} className="bg-brand-dark p-6 rounded-xl border border-white/5 hover:border-brand-gold/50 transition-all">
                                 <item.icon className="w-10 h-10 text-brand-gold mb-4" />
@@ -119,21 +122,21 @@ const PartnerProgram: React.FC = () => {
 
                 {/* Interactive Commission Calculator */}
                 <section className="bg-brand-dark p-6 md:p-10 rounded-3xl border border-white/5 shadow-2xl">
-                    <h2 className="text-3xl font-display font-black text-white mb-2 text-center">Calculate Your Earnings</h2>
-                    <p className="text-gray-400 text-center mb-10 text-sm">Estimate your monthly potential based on player activity.</p>
+                    <h2 className="text-3xl font-display font-black text-white mb-2 text-center">{t('partnerProgram.calculateEarnings')}</h2>
+                    <p className="text-gray-400 text-center mb-10 text-sm">{t('partnerProgram.calculateSubtitle')}</p>
 
                     <CommissionCalculator />
 
                     <div className="mt-8 text-xs text-gray-500 space-y-2 text-center max-w-2xl mx-auto">
-                        <p>• Both Total Turnover and Total Net Win/Loss must be met to qualify for the corresponding commission rate.</p>
-                        <p>• Negative profit will be carried forward to the next month.</p>
+                        <p>{t('partnerProgram.calculatorNote1')}</p>
+                        <p>{t('partnerProgram.calculatorNote2')}</p>
                     </div>
                 </section>
 
                 {/* Calculation Details */}
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="bg-brand-dark p-8 rounded-2xl border border-white/5">
-                        <h3 className="text-xl font-bold text-white mb-4 border-l-4 border-brand-gold pl-3">Commission Calculation Formula</h3>
+                        <h3 className="text-xl font-bold text-white mb-4 border-l-4 border-brand-gold pl-3">{t('partnerProgram.commissionFormula')}</h3>
                         <ul className="space-y-4 text-sm text-gray-400">
                             <li><strong className="text-white">Bonuses:</strong> Promotional credits, rewards, rebates, cashback claimed by players.</li>
                             <li><strong className="text-white">Transfer Fee:</strong> 1.5% fee on total deposits; 0.5% fee on total withdrawals.</li>
@@ -142,19 +145,19 @@ const PartnerProgram: React.FC = () => {
                     </div>
 
                     <div className="bg-brand-dark p-8 rounded-2xl border border-white/5">
-                        <h3 className="text-xl font-bold text-white mb-4 border-l-4 border-blue-500 pl-3">Sub-Partner Commission Plan</h3>
+                        <h3 className="text-xl font-bold text-white mb-4 border-l-4 border-blue-500 pl-3">{t('partnerProgram.subPartnerPlan')}</h3>
                         <p className="text-sm text-gray-400 mb-4">
                             A long-term income system designed for "partners referring partners".
                         </p>
                         <p className="text-sm text-gray-400">
-                            When your referred friend becomes a partner and passes verification, you will automatically become their upline and receive <span className="text-brand-gold font-bold">lifetime referral commission (10%)</span> from their earnings.
+                            {t('partnerProgram.subPartnerDesc')}
                         </p>
                     </div>
                 </section>
 
                 {/* Why Choose */}
                 <section>
-                    <h2 className="text-3xl font-display font-black text-white mb-10 text-center">Why Choose SevenStar?</h2>
+                    <h2 className="text-3xl font-display font-black text-white mb-10 text-center">{t('partnerProgram.whySevenstar')}</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
                             { head: "Zero Barrier", sub: "Earn profit with no conditions" },
@@ -177,7 +180,7 @@ const PartnerProgram: React.FC = () => {
 
                 {/* Terms */}
                 <section className="bg-gray-900/50 p-8 rounded-2xl">
-                    <h3 className="text-lg font-bold text-gray-300 mb-4 uppercase tracking-widest">Commission Payment Terms</h3>
+                    <h3 className="text-lg font-bold text-gray-300 mb-4 uppercase tracking-widest">{t('partnerProgram.paymentTerms')}</h3>
                     <ul className="list-disc list-inside space-y-2 text-sm text-gray-500">
                         <li>Commissions are settled monthly and released on the 5th–7th.</li>
                         <li>Funds are automatically credited to the partner account.</li>
@@ -196,7 +199,7 @@ const PartnerProgram: React.FC = () => {
                         rel="noreferrer"
                         className="gold-btn-gradient px-12 py-4 rounded-full font-bold text-brand-black text-lg inline-block shadow-xl hover:scale-105 transition-transform"
                     >
-                        JOIN PARTNER PROGRAM
+                        {t('ui.joinNow')}
                     </TrackedLink>
                 </div>
 
