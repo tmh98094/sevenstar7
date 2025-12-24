@@ -53,7 +53,7 @@ const Header: React.FC = () => {
           <Link to="/" className="flex items-center group transition-transform hover:scale-105 active:scale-95">
             {/* Using the image but ensuring it pops against the background */}
             <img
-              src="https://i.ibb.co/twDPv7RT/Gemini-Generated-Image-dt08xtdt08xtdt08-Photo-Grid.png"
+              src="/images/Sevenstar Logo.png"
               alt="SevenStar7 Full Logo"
               className="h-12 md:h-14 w-auto object-contain drop-shadow-[0_0_15px_rgba(250,187,46,0.3)]"
             />

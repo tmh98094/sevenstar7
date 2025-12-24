@@ -41,10 +41,12 @@ const GameLibrary: React.FC = () => {
                 .slice(0, 18);
         }
 
-        return allGames.filter(game => {
+        let games = allGames.filter(game => {
             let matchesCategory = true;
             if (activeCategory === 'popular') {
-                matchesCategory = game.category === 'Popular' || Math.random() > 0.5; // Simulate popular items
+                // Prioritize Pragmatic Play, JILI, and FC games
+                const priorityProviders = ['Pragmatic Play', 'JILI', 'FC'];
+                matchesCategory = priorityProviders.includes(game.provider) || Math.random() > 0.7;
             } else if (activeCategory !== 'all' && activeCategory !== 'new') {
                 const searchCategory = activeCategory.toLowerCase().replace('-', ' ');
                 matchesCategory = game.category.toLowerCase().includes(searchCategory) ||
@@ -55,6 +57,20 @@ const GameLibrary: React.FC = () => {
             const matchesSearch = game.title.toLowerCase().includes(searchTerm.toLowerCase()) || game.provider.toLowerCase().includes(searchTerm.toLowerCase());
             return matchesCategory && matchesSearch;
         });
+
+        // Sort popular games to show priority providers first
+        if (activeCategory === 'popular') {
+            const priorityProviders = ['Pragmatic Play', 'JILI', 'FC'];
+            games = games.sort((a, b) => {
+                const aIsPriority = priorityProviders.includes(a.provider);
+                const bIsPriority = priorityProviders.includes(b.provider);
+                if (aIsPriority && !bIsPriority) return -1;
+                if (!aIsPriority && bIsPriority) return 1;
+                return 0;
+            });
+        }
+
+        return games;
     })();
 
     // Pagination Logic
