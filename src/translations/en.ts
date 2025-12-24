@@ -1,0 +1,314 @@
+import { Translations } from './types';
+
+export const enTranslations: Translations = {
+  nav: {
+    home: 'Home',
+    games: 'All Games',
+    promotions: 'Promotions',
+    partner: 'Partner Program',
+    blog: 'Game Guides',
+    croco: 'Croco Hub',
+  },
+
+  games: {
+    // Croco Games
+    'croco-1': { title: 'Arcane Portals', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-2': { title: 'Candy Fiesta 1000', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-3': { title: 'Clash & Cash', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-4': { title: 'Cursed Clown', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-5': { title: 'Cyberpunk', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-6': { title: 'Deadliest Sea', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-7': { title: 'Dragon Quest', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-8': { title: 'Ghost Boonanza', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-9': { title: 'Gold of Olympus', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-10': { title: 'Golden Year', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-11': { title: "Jack's Crypt", description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-12': { title: 'John Wild', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-13': { title: 'Left 4 Cash', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-14': { title: 'Lucky Ranch', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-15': { title: 'Magical Mine', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-16': { title: 'Ne Zha', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-17': { title: 'Piece of Cash', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-18': { title: 'Reel Big Catch', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-19': { title: 'Rhino Robbery', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-20': { title: 'Run Away Zombies', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-21': { title: 'Samurai Clash', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-22': { title: 'Sea of Olympus 1000', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-23': { title: 'Starshine Princess', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-24': { title: 'Sugar Fiesta 1000', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-25': { title: 'Super Waldo', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-26': { title: 'Symbiote', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-27': { title: 'The Cursed Doll', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-28': { title: 'Tim and Larry', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-29': { title: "Wizard's Academy", description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+    'croco-30': { title: 'Wukong', description: 'Exclusive Croco Gaming title with enhanced RTP.' },
+
+    // Slot Games
+    'slot-1': { title: '12 Skulls Of The Dead' },
+    'slot-2': { title: '3 Coin Treasures' },
+    'slot-3': { title: '88 Fortunes' },
+    'slot-4': { title: 'Asgardian Fire' },
+    'slot-5': { title: 'Aztec Bonus Hunt' },
+    'slot-6': { title: 'Blossom Of Fortune' },
+    'slot-7': { title: 'Bonus Mania' },
+    'slot-8': { title: 'Cai Shen Dao' },
+    'slot-9': { title: 'Capt Dead' },
+    'slot-10': { title: 'Cyberpunk' },
+    'slot-11': { title: 'Dancing Dragon' },
+    'slot-12': { title: "Dragon Chi's Quest" },
+    'slot-13': { title: 'Dragon God Mahjong' },
+    'slot-14': { title: 'Fighters Inc' },
+    'slot-15': { title: 'Fortune Gems' },
+    'slot-16': { title: 'Gates of Olympus' },
+    'slot-17': { title: 'Gates of Wealth' },
+    'slot-18': { title: 'Gold of Olympus' },
+    'slot-19': { title: 'Happy Buddha' },
+    'slot-20': { title: 'Heavenly Elephant Fortune' },
+    'slot-21': { title: 'Hi-Lo Premium' },
+    'slot-22': { title: 'Hot Chili' },
+    'slot-23': { title: 'Jackpot Joker' },
+    'slot-24': { title: 'John Wild' },
+    'slot-25': { title: 'Labubu' },
+    'slot-26': { title: 'Luck88' },
+    'slot-27': { title: 'Lucky Fortunes' },
+    'slot-28': { title: 'Masquerade' },
+    'slot-29': { title: 'Nezha Croco' },
+    'slot-30': { title: 'Splash of Riches' },
+    'slot-31': { title: 'Starlight Princess' },
+    'slot-32': { title: 'Sugar Crush' },
+    'slot-33': { title: 'Tim & Larry' },
+    'slot-34': { title: 'Treasure Bowl' },
+    'slot-35': { title: 'Wukong' },
+
+    // Providers
+    'provider-1': { title: '918Kiss' },
+    'provider-2': { title: 'AMB' },
+    'provider-3': { title: 'CQ9' },
+    'provider-4': { title: 'Croco Gaming' },
+    'provider-5': { title: 'Duofu' },
+    'provider-6': { title: 'Epicwin' },
+    'provider-7': { title: 'Evo' },
+    'provider-8': { title: 'FC' },
+    'provider-9': { title: 'GW99' },
+    'provider-10': { title: 'JDB' },
+    'provider-11': { title: 'JILI' },
+    'provider-12': { title: 'Joker' },
+    'provider-13': { title: 'Ka Gaming' },
+    'provider-14': { title: 'LFC' },
+    'provider-15': { title: 'Lionking' },
+    'provider-16': { title: 'Lucky365' },
+    'provider-17': { title: 'Mega888' },
+    'provider-18': { title: 'Microgaming' },
+    'provider-19': { title: 'Nextspin' },
+    'provider-20': { title: 'Pragmatic' },
+    'provider-21': { title: 'Spride' },
+    'provider-22': { title: 'UUSlot' },
+    'provider-23': { title: 'VPlus' },
+    'provider-24': { title: 'VPower' },
+
+    // Live Games
+    'live-1': { title: 'AG' },
+    'live-2': { title: 'BG' },
+    'live-3': { title: 'Evolution' },
+    'live-4': { title: 'King855' },
+    'live-5': { title: 'Playtech' },
+    'live-6': { title: 'Pragmatic' },
+    'live-7': { title: 'SA Gaming' },
+    'live-8': { title: 'Sexy Baccarat' },
+
+    // Sports
+    'sports-1': { title: 'SBOBET' },
+    'sports-2': { title: 'CMD368' },
+  },
+
+  categories: {
+    exclusive: {
+      title: 'Croco Gaming',
+      description: 'Exclusive partnership with 98.5% RTP.',
+      longDescription: 'SevenStar7 is the authorized partner for Croco Gaming in Malaysia. Experience premium slots and arcade games directly on our platform.',
+      features: ['High Win Rate', 'Malaysia Exclusive', 'Arcade Style'],
+    },
+    slots: {
+      title: 'Hot Slots',
+      description: '1,000+ Jackpot machines ready to hit.',
+      longDescription: "Access the world's most popular slot providers including Pragmatic Play, 918Kiss and more.",
+      features: ['Daily Jackpots', 'Free Spins', 'Demo Mode'],
+    },
+    'live-casino': {
+      title: 'Live Tables',
+      description: '4K Baccarat, Roulette & Blackjack.',
+      longDescription: "Connect with real dealers in Asia's most prestigious live casino halls. Seamless HD streaming.",
+      features: ['Real Dealers', 'HD Streaming', 'No Latency'],
+    },
+    sports: {
+      title: 'Sportsbook',
+      description: 'Best odds for EPL & World Cup.',
+      longDescription: "Place your bets on major sporting events with Malaysia's most competitive odds.",
+      features: ['Live Betting', 'Instant Result', 'High Odds'],
+    },
+  },
+
+  testimonials: {
+    '1': {
+      message: "Honestly, I was skeptical about the 3-minute withdrawal claim, but it's legit. I hit a x500 multiplier last night and the funds were in my Maybank account before I could even close the app. Best service in Malaysia.",
+      game: 'Gates of Olympus',
+    },
+    '2': {
+      message: "I've played on many sites, but SevenStar7 is the only one where the live tables don't lag. The VIP host actually treats you like a human being. Just got my birthday bonus credited instantly. Highly recommended.",
+      game: 'Lightning Baccarat',
+    },
+    '3': {
+      message: "The exclusive Croco games are way looser than the standard slots. I switched over from 918Kiss and haven't looked back. The interface is smooth on my iPhone, and customer service replies in seconds.",
+      game: 'Croco Gold',
+    },
+    '4': {
+      message: 'Instant withdrawals and great live dealers. SevenStar is top tier!',
+      game: 'Live Baccarat',
+    },
+    '5': {
+      message: 'Hit the multiplier of my life! The gold design is also very nice.',
+      game: 'Gates of Olympus',
+    },
+    '6': {
+      message: 'Best fishing games in Malaysia. No lag, smooth gameplay.',
+      game: 'Fishing God',
+    },
+    '7': {
+      message: 'My favorite slot game pays out huge here. Truly 7-star service.',
+      game: 'Mahjong Ways 2',
+    },
+    '8': {
+      message: 'Great odds on EPL matches. Cashing out is super fast.',
+      game: 'Sportsbook',
+    },
+    '9': {
+      message: 'Jackpot winner! I thought it was fake but they paid me in 10 mins.',
+      game: 'Mega888',
+    },
+  },
+
+  blog: {
+    'how-to-win-slots-2025': {
+      title: '2025 Slots Winning Strategy for Malaysian Players',
+      excerpt: 'Learn the unwritten rules of RTP and volatility to boost your winning chances on Pragmatic Play titles.',
+      content: `
+        <p class="mb-4 text-gray-400">Winning at slots isn't just about luck. It's about timing and understanding machine cycles. In Malaysia, players often find success by following a strictly regulated bankroll strategy.</p>
+        <h3 class="text-xl font-black text-white mb-4 uppercase">1. Watch the RTP</h3>
+        <p class="mb-6 text-gray-400">Always choose games with RTP above 96%. Our Croco Gaming partnership offers up to 98.5% which is the highest in the market currently.</p>
+        <h3 class="text-xl font-black text-white mb-4 uppercase">2. Bankroll Control</h3>
+        <p class="mb-6 text-gray-400">Never bet more than 1% of your total balance on a single spin. Consistency wins over aggression.</p>
+      `,
+      category: 'Guides',
+      tags: ['Slots', 'RTP', 'Winning'],
+    },
+    'crypto-gambling-malaysia': {
+      title: 'Why USDT is the Best Way to Play in Malaysia',
+      excerpt: 'Privacy, speed, and zero bank restrictions. See why Malaysian high-rollers are switching to USDT.',
+      content: `
+        <p class="mb-4 text-gray-400">Malaysian banks can sometimes be restrictive. Crypto offers a seamless way to play without borders.</p>
+        <h3 class="text-xl font-black text-white mb-4 uppercase">Instant & Private</h3>
+        <p class="mb-6 text-gray-400">USDT (TRC20) transfers happen in seconds. No need to wait for bank maintenance windows or processing delays.</p>
+      `,
+      category: 'News',
+      tags: ['Crypto', 'USDT', 'Privacy'],
+    },
+  },
+
+  ui: {
+    playNow: 'PLAY!',
+    readMore: 'Read More',
+    viewAll: 'View All',
+    loading: 'Loading...',
+    error: 'Error',
+    menu: 'Menu',
+    close: 'Close',
+    allGames: 'All Games',
+    games: 'Games',
+    providers: 'Providers',
+    search: 'Search',
+    searchPlaceholder: 'Search games...',
+    popular: 'Popular',
+    new: 'New',
+    exclusive: 'Exclusive',
+    category: 'Category',
+    status: 'Status',
+    clearFilters: 'Clear Filters',
+    rtp: 'RTP',
+    volatility: 'Volatility',
+    maxWin: 'Max Win',
+    low: 'Low',
+    medium: 'Medium',
+    high: 'High',
+    veryHigh: 'Very High',
+    previous: 'Previous',
+    next: 'Next',
+    page: 'Page',
+    of: 'of',
+    play: 'Play',
+    demo: 'Demo',
+    info: 'Info',
+    readyToWin: 'Ready to Win?',
+    support24_7: '24/7 SUPPORT',
+    malaysia: 'MALAYSIA',
+    ageRestriction: '18+',
+  },
+
+  achievements: {
+    '1': {
+      title: 'Licensed',
+      description: 'Fully licensed by PAGCOR. We operate under strict international gaming regulations to ensure a safe environment.',
+    },
+    '2': {
+      title: 'Speed',
+      description: 'Our automated systems ensure 3-minute deposits and instant withdrawal processing 24/7.',
+    },
+    '3': {
+      title: 'Mobile',
+      description: 'Optimized for iOS and Android. No download required, play directly from your browser.',
+    },
+    '4': {
+      title: 'Verified',
+      description: 'A Trusted Hub for over 50,000 active players in Malaysia with verified payout records.',
+    },
+  },
+
+  faq: {
+    '1': {
+      question: 'How to deposit?',
+      answer: 'Login to your account, and you can use FPX, DuitNow, and USDT for instant funding.',
+    },
+    '2': {
+      question: 'Are the games fair?',
+      answer: 'Yes, all games on our platform are audited by BMM and iTech Labs for complete transparency.',
+    },
+    '3': {
+      question: 'What is the minimum withdrawal?',
+      answer: 'The minimum withdrawal amount is MYR 50, with no maximum limit for VIP members.',
+    },
+  },
+
+  footer: {
+    mission: "Malaysia's authorized online casino. We provide high-stakes digital entertainment with fully licensed gaming providers, ensuring a zero-risk environment for our elite player base.",
+    navigation: 'Navigation',
+    playerSupport: 'Player Support',
+    authority: 'Authority',
+    home: 'Home',
+    exclusiveCrocoHub: 'Exclusive Croco Hub',
+    liveCasino: 'Live Casino',
+    slots: 'Slots',
+    partnerProgram: 'Partner Program',
+    accountSecurity: 'Account Security',
+    winningStrategies: 'Winning Strategies',
+    bonusTerms: 'Bonus T&C',
+    cryptoGuide: 'Crypto Guide',
+    responsibleGaming: 'Responsible Gaming',
+    pagcorLicensed: 'PAGCOR LICENSED',
+    officialPartner: 'OFFICIAL PARTNER',
+    encryptedRegulated: 'Encrypted & Regulated Environment.',
+    secure: 'SECURE',
+    private: 'PRIVATE',
+    licensed: 'LICENSED',
+    legalNotice: '18+ ONLY. GAMBLING CAN BE ADDICTIVE. LICENSED OPERATOR.',
+    copyright: '© 2024 SEVENSTAR7 MALAYSIA • AUTHORIZED',
+  },
+};
