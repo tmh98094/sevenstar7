@@ -217,7 +217,7 @@ const Home: React.FC = () => {
       {/* Partners Reel - Auto Scroll */}
       <section className="bg-brand-dark border-y border-white/5 py-8 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="text-center text-[10px] font-black uppercase tracking-[0.3em] text-gray-500 mb-6">Official Partners</div>
+          <div className="text-center text-[10px] font-black uppercase tracking-[0.3em] text-gray-500 mb-6">{t('ui.officialPartners')}</div>
           <AutoScroll>
             {PARTNERS.map((p, i) => (
               <span key={i} className="text-base md:text-xl font-display font-bold text-white whitespace-nowrap mx-4 opacity-40 hover:opacity-100 transition-opacity cursor-default">{p}</span>
@@ -235,8 +235,8 @@ const Home: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-8 md:mb-16"
           >
-            <h2 className="text-2xl md:text-5xl font-display font-black text-white uppercase tracking-tighter mb-4">Why Choose SevenStar7</h2>
-            <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">The gold standard in online gaming integrity and speed.</p>
+            <h2 className="text-2xl md:text-5xl font-display font-black text-white uppercase tracking-tighter mb-4">{t('ui.whyChooseSevenstar')}</h2>
+            <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">{t('ui.goldStandard')}</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-6">
@@ -345,7 +345,7 @@ const Home: React.FC = () => {
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="mb-8">
             <h2 className="text-4xl md:text-5xl font-display font-black text-white uppercase tracking-tighter flex items-center gap-3">
               <div className="w-2 h-12 bg-brand-gold rounded-full shadow-[0_0_20px_#fabb2e]"></div>
-              THE LOBBY
+              {t('ui.theLobby')}
             </h2>
           </motion.div>
 
@@ -424,13 +424,13 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* REORDERED: Awards (Excellence) Section - Updated Images */}
       < section className="py-10 md:py-20 bg-brand-black border-t border-white/5" >
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-display font-black text-white mb-2">Recognized for Excellence</h2>
-          <p className="text-gray-500 text-sm mb-12">Award-winning service backed by international independent certifications.</p>
+          <h2 className="text-2xl md:text-3xl font-display font-black text-white mb-2">{t('ui.recognizedExcellence')}</h2>
+          <p className="text-gray-500 text-sm mb-12">{t('ui.awardDescription')}</p>
 
           <div className="flex flex-wrap justify-center gap-12 md:gap-20">
             <motion.div whileHover={{ scale: 1.05 }} className="flex flex-col items-center">
@@ -459,7 +459,7 @@ const Home: React.FC = () => {
       < section className="py-16 bg-white/5 border-b border-white/5 overflow-hidden" >
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
-            <h3 className="text-white font-display font-black text-xl md:text-3xl uppercase tracking-tight mb-2">Licensed, Audited & Certified By</h3>
+            <h3 className="text-white font-display font-black text-xl md:text-3xl uppercase tracking-tight mb-2">{t('ui.licensedCertified')}</h3>
           </div>
 
           <AutoScroll>
@@ -495,7 +495,7 @@ const Home: React.FC = () => {
       < section className="py-20 bg-brand-dark border-t border-white/5 overflow-hidden" >
         <div className="container mx-auto px-4">
           <div className="flex items-end justify-between mb-12">
-            <h2 className="text-3xl md:text-5xl font-display font-black text-white uppercase tracking-tighter">Player Wins</h2>
+            <h2 className="text-3xl md:text-5xl font-display font-black text-white uppercase tracking-tighter">{t('ui.playerWins')}</h2>
             <div className="hidden md:flex gap-2">
               <button
                 onClick={() => {
@@ -526,32 +526,35 @@ const Home: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {TESTIMONIALS.slice(testimonialStartIndex, testimonialStartIndex + 3).map((t, idx) => (
+            {TESTIMONIALS.slice(testimonialStartIndex, testimonialStartIndex + 3).map((testimonial, idx) => (
               <motion.div
-                key={t.id}
+                key={testimonial.id}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: idx * 0.1 }}
                 className="bg-brand-black p-8 rounded-[2rem] border border-white/5 relative flex flex-col h-full hover:border-brand-gold/30 transition-colors shadow-xl"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full border-2 border-brand-gold" />
+                  <img src={testimonial.avatar} alt={testimonial.name} className="w-12 h-12 rounded-full border-2 border-brand-gold" />
                   <div>
-                    <h4 className="text-white font-bold">{t.name}</h4>
+                    <h4 className="text-white font-bold">{testimonial.name}</h4>
                     <div className="flex items-center gap-2">
-                      <span className="text-brand-gold text-xs font-black">Verified Winner</span>
+                      <span className="text-brand-gold text-xs font-black">{t('ui.verifiedWinner')}</span>
                       <BadgeCheck size={12} className="text-blue-400" />
                     </div>
                   </div>
                 </div>
-                <p className="text-gray-400 text-sm leading-relaxed mb-6 italic flex-1">"{getTestimonialMessage(t.id.toString())}"</p>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6 italic flex-1">"{getTestimonialMessage(testimonial.id.toString())}"</p>
                 <div className="pt-4 border-t border-white/5 flex justify-between items-center">
-                  <div className="text-[10px] text-gray-600 font-bold uppercase">Game: {getTestimonialGame(t.id.toString())}</div>
-                  <div className="text-brand-gold font-black text-sm">{t.winAmount}</div>
+                  <div className="text-[10px] text-gray-600 font-bold uppercase">Game: {getTestimonialGame(testimonial.id.toString())}</div>
+                  <div className="text-brand-gold font-black text-sm">{testimonial.winAmount}</div>
                 </div>
               </motion.div>
             ))}
           </div>
+          {t('ui.googleTranslated') && (
+            <p className="text-center text-gray-500 text-xs mt-6 italic">{t('ui.googleTranslated')}</p>
+          )}
         </div>
       </section >
 
@@ -600,9 +603,9 @@ const Home: React.FC = () => {
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-display font-black text-brand-black mb-4">Ready to Start Winning?</h2>
+          <h2 className="text-3xl md:text-5xl font-display font-black text-brand-black mb-4">{t('ui.readyToStart')}</h2>
           <p className="text-brand-black/80 font-medium text-lg mb-8 max-w-2xl mx-auto">
-            Join the thousands of Malaysians winning big on SevenStar7 every day. Safe, Secure, and Spectacular.
+            {t('ui.joinThousands')}
           </p>
           <motion.a
             whileHover={{ scale: 1.05 }}
@@ -620,8 +623,8 @@ const Home: React.FC = () => {
       < section className="py-16 bg-brand-black border-t border-white/5" >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-display font-black text-white uppercase tracking-tighter">Latest News</h2>
-            <Link to="/blog" className="text-brand-gold text-xs font-black hover:underline uppercase tracking-widest">View All</Link>
+            <h2 className="text-2xl font-display font-black text-white uppercase tracking-tighter">{t('ui.latestNews')}</h2>
+            <Link to="/blog" className="text-brand-gold text-xs font-black hover:underline uppercase tracking-widest">{t('ui.viewAllText')}</Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {BLOG_POSTS.slice(0, 2).map(post => (

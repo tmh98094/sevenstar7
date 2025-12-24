@@ -122,6 +122,21 @@ export interface UITranslations {
   completeCatalog: string;
   gameLibrary: string;
   exploreCollection: string;
+  // Section headings
+  whyChooseSevenstar: string;
+  goldStandard: string;
+  exclusiveCrocoHub: string;
+  crocoDescription: string;
+  launchCrocoHub: string;
+  theLobby: string;
+  recognizedExcellence: string;
+  awardDescription: string;
+  licensedCertified: string;
+  playResponsibly: string;
+  gamblingAddictive: string;
+  faqTitle: string;
+  viewAllText: string;
+  googleTranslated: string;
 }
 
 export interface AchievementTranslations {
