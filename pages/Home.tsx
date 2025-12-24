@@ -643,32 +643,41 @@ const Home: React.FC = () => {
       </section >
 
       {/* Mobile Sticky Action Bar */}
-      < div className="lg:hidden fixed bottom-0 left-0 right-0 z-[100] bg-brand-black/95 backdrop-blur-3xl border-t border-white/10 px-6 py-4 pb-6 flex justify-between items-center shadow-[0_-15px_40px_rgba(0,0,0,0.9)]" >
-        <Link to="/" className="flex flex-col items-center gap-1 text-brand-gold">
-          <Star size={22} fill="#fabb2e" />
-          <span className="text-[9px] font-black uppercase tracking-tighter">{t('nav.home')}</span>
-        </Link>
-        <a href={EXTERNAL_LINK} target="_blank" rel="noreferrer" className="flex flex-col items-center gap-1 text-gray-500">
-          <Gift size={22} />
-          <span className="text-[9px] font-black uppercase tracking-tighter">Bonus</span>
-        </a>
-
-        <a href={EXTERNAL_LINK} target="_blank" rel="noreferrer" className="flex flex-col items-center gap-2 -mt-10">
-          <div className="bg-brand-gold text-brand-black p-4 rounded-full shadow-[0_0_25px_rgba(250,187,46,0.6)] border-[6px] border-brand-black active:scale-90 transition-all">
-            <ExternalLink size={24} strokeWidth={3} />
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-[100] bg-brand-black/95 backdrop-blur-3xl border-t border-white/10 px-4 py-3 pb-5 shadow-[0_-15px_40px_rgba(0,0,0,0.9)]">
+        <div className="flex justify-center items-end relative">
+          {/* Left Side Buttons */}
+          <div className="absolute left-0 flex gap-6">
+            <Link to="/" className="flex flex-col items-center gap-1 text-brand-gold">
+              <Star size={18} fill="#fabb2e" />
+              <span className="text-[8px] font-black uppercase tracking-tighter">{t('nav.home')}</span>
+            </Link>
+            <a href={EXTERNAL_LINK} target="_blank" rel="noreferrer" className="flex flex-col items-center gap-1 text-gray-500">
+              <Gift size={18} />
+              <span className="text-[8px] font-black uppercase tracking-tighter">Bonus</span>
+            </a>
           </div>
-          <span className="text-[9px] font-black text-brand-gold uppercase tracking-widest">{t('ui.play').toUpperCase()}</span>
-        </a>
 
-        <Link to="/partner" className="flex flex-col items-center gap-1 text-gray-500">
-          <Users size={22} />
-          <span className="text-[9px] font-black uppercase tracking-tighter">{t('nav.partner')}</span>
-        </Link>
-        <Link to="/blog" className="flex flex-col items-center gap-1 text-gray-500">
-          <BookOpen size={22} />
-          <span className="text-[9px] font-black uppercase tracking-tighter">{t('nav.blog')}</span>
-        </Link>
-      </div >
+          {/* Center Play Button */}
+          <a href={EXTERNAL_LINK} target="_blank" rel="noreferrer" className="flex flex-col items-center gap-2 -mt-8">
+            <div className="bg-brand-gold text-brand-black p-3 rounded-full shadow-[0_0_25px_rgba(250,187,46,0.6)] border-[5px] border-brand-black active:scale-90 transition-all">
+              <ExternalLink size={20} strokeWidth={3} />
+            </div>
+            <span className="text-[8px] font-black text-brand-gold uppercase tracking-widest">{t('ui.play').toUpperCase()}</span>
+          </a>
+
+          {/* Right Side Buttons */}
+          <div className="absolute right-0 flex gap-6">
+            <Link to="/partner" className="flex flex-col items-center gap-1 text-gray-500">
+              <Users size={18} />
+              <span className="text-[8px] font-black uppercase tracking-tighter">{t('nav.partner')}</span>
+            </Link>
+            <Link to="/blog" className="flex flex-col items-center gap-1 text-gray-500">
+              <BookOpen size={18} />
+              <span className="text-[8px] font-black uppercase tracking-tighter">{t('nav.blog')}</span>
+            </Link>
+          </div>
+        </div>
+      </div>
 
     </div >
   );
