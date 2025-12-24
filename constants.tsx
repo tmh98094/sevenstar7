@@ -146,28 +146,30 @@ export const SLOT_GAMES: Game[] = [
   { id: 'slot-35', title: 'Wukong', provider: 'Pragmatic Play', category: 'Slots', imageUrl: '/images/slot/games/Wukong.png', rtp: '96.5%', volatility: 'High' as 'High', maxWin: 'x20000' },
 ];
 
-// Slot Providers (24 provider logos for category view)
+// Slot Providers (24 provider logos for category view) - Prioritized: Pragmatic, JILI, FC
 export const SLOT_PROVIDERS: Game[] = [
-  { id: 'provider-1', title: '918Kiss', provider: '918Kiss', category: 'Slots', imageUrl: '/images/slot/category/918kiss.png', rtp: '96.5%', volatility: 'High' as 'High', maxWin: 'x10000' },
-  { id: 'provider-2', title: 'AMB', provider: 'AMB', category: 'Slots', imageUrl: '/images/slot/category/AMB.png', rtp: '96.2%', volatility: 'Medium' as 'Medium', maxWin: 'x5000' },
-  { id: 'provider-3', title: 'CQ9', provider: 'CQ9', category: 'Slots', imageUrl: '/images/slot/category/CQ9.png', rtp: '96.8%', volatility: 'High' as 'High', maxWin: 'x8000' },
+  // Priority providers first
+  { id: 'provider-20', title: 'Pragmatic', provider: 'Pragmatic Play', category: 'Slots', imageUrl: '/images/slot/category/Pragmatic.png', rtp: '96.5%', volatility: 'High' as 'High', maxWin: 'x21100' },
+  { id: 'provider-11', title: 'JILI', provider: 'JILI', category: 'Slots', imageUrl: '/images/slot/category/JILI.png', rtp: '97.1%', volatility: 'Very High' as 'Very High', maxWin: 'x20000' },
+  { id: 'provider-8', title: 'FC', provider: 'FC', category: 'Slots', imageUrl: '/images/slot/category/FC.png', rtp: '96.6%', volatility: 'High' as 'High', maxWin: 'x9000' },
   { id: 'provider-4', title: 'Croco Gaming', provider: 'Croco Gaming', category: 'Slots', imageUrl: '/images/slot/category/Croco Gaming.png', rtp: '98.5%', volatility: 'Very High' as 'Very High', maxWin: 'x50000' },
+  // Other providers
+  { id: 'provider-1', title: '918Kiss', provider: '918Kiss', category: 'Slots', imageUrl: '/images/slot/category/918kiss.png', rtp: '96.5%', volatility: 'High' as 'High', maxWin: 'x10000' },
+  { id: 'provider-17', title: 'Mega888', provider: 'Mega888', category: 'Slots', imageUrl: '/images/slot/category/Mega888.png', rtp: '96.8%', volatility: 'High' as 'High', maxWin: 'x13000' },
+  { id: 'provider-10', title: 'JDB', provider: 'JDB', category: 'Slots', imageUrl: '/images/slot/category/JDB.png', rtp: '96.9%', volatility: 'High' as 'High', maxWin: 'x15000' },
+  { id: 'provider-3', title: 'CQ9', provider: 'CQ9', category: 'Slots', imageUrl: '/images/slot/category/CQ9.png', rtp: '96.8%', volatility: 'High' as 'High', maxWin: 'x8000' },
+  { id: 'provider-2', title: 'AMB', provider: 'AMB', category: 'Slots', imageUrl: '/images/slot/category/AMB.png', rtp: '96.2%', volatility: 'Medium' as 'Medium', maxWin: 'x5000' },
   { id: 'provider-5', title: 'Duofu', provider: 'Duofu', category: 'Slots', imageUrl: '/images/slot/category/Duofu.png', rtp: '96.3%', volatility: 'Medium' as 'Medium', maxWin: 'x6000' },
   { id: 'provider-6', title: 'Epicwin', provider: 'Epicwin', category: 'Slots', imageUrl: '/images/slot/category/Epicwin.png', rtp: '96.7%', volatility: 'High' as 'High', maxWin: 'x12000' },
   { id: 'provider-7', title: 'Evo', provider: 'Evo', category: 'Slots', imageUrl: '/images/slot/category/Evo.png', rtp: '96.4%', volatility: 'Medium' as 'Medium', maxWin: 'x7000' },
-  { id: 'provider-8', title: 'FC', provider: 'FC', category: 'Slots', imageUrl: '/images/slot/category/FC.png', rtp: '96.6%', volatility: 'High' as 'High', maxWin: 'x9000' },
   { id: 'provider-9', title: 'GW99', provider: 'GW99', category: 'Slots', imageUrl: '/images/slot/category/GW99.png', rtp: '96.1%', volatility: 'Medium' as 'Medium', maxWin: 'x5500' },
-  { id: 'provider-10', title: 'JDB', provider: 'JDB', category: 'Slots', imageUrl: '/images/slot/category/JDB.png', rtp: '96.9%', volatility: 'High' as 'High', maxWin: 'x15000' },
-  { id: 'provider-11', title: 'JILI', provider: 'JILI', category: 'Slots', imageUrl: '/images/slot/category/JILI.png', rtp: '97.1%', volatility: 'Very High' as 'Very High', maxWin: 'x20000' },
   { id: 'provider-12', title: 'Joker', provider: 'Joker', category: 'Slots', imageUrl: '/images/slot/category/Joker.png', rtp: '96.5%', volatility: 'High' as 'High', maxWin: 'x10000' },
   { id: 'provider-13', title: 'Ka Gaming', provider: 'Ka Gaming', category: 'Slots', imageUrl: '/images/slot/category/Ka Gaming.png', rtp: '96.4%', volatility: 'Medium' as 'Medium', maxWin: 'x7500' },
   { id: 'provider-14', title: 'LFC', provider: 'LFC', category: 'Slots', imageUrl: '/images/slot/category/LFC.png', rtp: '96.3%', volatility: 'Medium' as 'Medium', maxWin: 'x6500' },
   { id: 'provider-15', title: 'Lionking', provider: 'Lionking', category: 'Slots', imageUrl: '/images/slot/category/Lionking.png', rtp: '96.6%', volatility: 'High' as 'High', maxWin: 'x11000' },
   { id: 'provider-16', title: 'Lucky365', provider: 'Lucky365', category: 'Slots', imageUrl: '/images/slot/category/Lucky365.png', rtp: '96.2%', volatility: 'Medium' as 'Medium', maxWin: 'x5800' },
-  { id: 'provider-17', title: 'Mega888', provider: 'Mega888', category: 'Slots', imageUrl: '/images/slot/category/Mega888.png', rtp: '96.8%', volatility: 'High' as 'High', maxWin: 'x13000' },
   { id: 'provider-18', title: 'Microgaming', provider: 'Microgaming', category: 'Slots', imageUrl: '/images/slot/category/Microgaming.png', rtp: '96.5%', volatility: 'High' as 'High', maxWin: 'x10000' },
   { id: 'provider-19', title: 'Nextspin', provider: 'Nextspin', category: 'Slots', imageUrl: '/images/slot/category/Nextspin.png', rtp: '96.7%', volatility: 'High' as 'High', maxWin: 'x12000' },
-  { id: 'provider-20', title: 'Pragmatic', provider: 'Pragmatic Play', category: 'Slots', imageUrl: '/images/slot/category/Pragmatic.png', rtp: '96.5%', volatility: 'High' as 'High', maxWin: 'x21100' },
   { id: 'provider-21', title: 'Spride', provider: 'Spride', category: 'Slots', imageUrl: '/images/slot/category/Spride.png', rtp: '96.4%', volatility: 'Medium' as 'Medium', maxWin: 'x7000' },
   { id: 'provider-22', title: 'UUSlot', provider: 'UUSlot', category: 'Slots', imageUrl: '/images/slot/category/UUSlot.png', rtp: '96.3%', volatility: 'Medium' as 'Medium', maxWin: 'x6000' },
   { id: 'provider-23', title: 'VPlus', provider: 'VPlus', category: 'Slots', imageUrl: '/images/slot/category/VPlus.png', rtp: '96.6%', volatility: 'High' as 'High', maxWin: 'x9500' },
@@ -204,77 +206,78 @@ export const FEATURED_GAMES: Game[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 1,
-    name: "Tan S.",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    name: "陈伟明",
+    avatar: "https://i.pravatar.cc/150?img=11",
     winAmount: "MYR 12,450",
     game: "Gates of Olympus",
-    message: "Honestly, I was skeptical about the 3-minute withdrawal claim, but it's legit. I hit a x500 multiplier last night and the funds were in my Maybank account before I could even close the app. Best service in Malaysia."
+    message: "说实话，我对3分钟提款的说法持怀疑态度，但这是真的。昨晚我中了x500倍数，资金在我关闭应用程序之前就到了我的Maybank账户。马来西亚最好的服务。"
   },
   {
     id: 2,
-    name: "Jason Lim",
-    avatar: "https://randomuser.me/api/portraits/men/45.jpg",
+    name: "Ahmad Razak",
+    avatar: "https://i.pravatar.cc/150?img=12",
     winAmount: "MYR 8,200",
     game: "Lightning Baccarat",
-    message: "I've played on many sites, but SevenStar7 is the only one where the live tables don't lag. The VIP host actually treats you like a human being. Just got my birthday bonus credited instantly. Highly recommended."
+    message: "Saya dah main banyak tempat, tapi SevenStar7 je yang live tables tak lag. VIP host layan macam VIP betul. Baru dapat birthday bonus terus masuk. Memang recommend!"
   },
   {
     id: 3,
-    name: "Raj M.",
-    avatar: "https://randomuser.me/api/portraits/men/22.jpg",
+    name: "Rajesh Kumar",
+    avatar: "https://i.pravatar.cc/150?img=13",
     winAmount: "MYR 45,000",
     game: "Croco Gold",
     message: "The exclusive Croco games are way looser than the standard slots. I switched over from 918Kiss and haven't looked back. The interface is smooth on my iPhone, and customer service replies in seconds."
   },
   {
     id: 4,
-    name: 'Michael T.',
-    avatar: 'https://i.pravatar.cc/150?u=michael',
-    winAmount: 'MYR 2,450',
-    game: 'Live Baccarat',
-    message: 'Instant withdrawals and great live dealers. SevenStar is top tier!'
+    name: "林美玲",
+    avatar: "https://i.pravatar.cc/150?img=5",
+    winAmount: "MYR 2,450",
+    game: "Live Baccarat",
+    message: "即时提款和优秀的真人荷官。SevenStar是顶级的！推荐给所有朋友了。"
   },
   {
     id: 5,
-    name: 'Sarah L.',
-    avatar: 'https://i.pravatar.cc/150?u=sarah',
-    winAmount: 'MYR 8,900',
-    game: 'Gates of Olympus',
-    message: 'Hit the multiplier of my life! The gold design is also very nice.'
+    name: "Nurul Aisyah",
+    avatar: "https://i.pravatar.cc/150?img=9",
+    winAmount: "MYR 8,900",
+    game: "Gates of Olympus",
+    message: "Dapat multiplier besar! Design gold dia pun cantik sangat. Withdraw pun laju, dalam 3 minit dah sampai."
   },
   {
     id: 6,
-    name: 'David W.',
-    avatar: 'https://i.pravatar.cc/150?u=david',
-    winAmount: 'MYR 3,200',
-    game: 'Fishing God',
-    message: 'Best fishing games in Malaysia. No lag, smooth gameplay.'
+    name: "Muthu Selvam",
+    avatar: "https://i.pravatar.cc/150?img=14",
+    winAmount: "MYR 3,200",
+    game: "Fishing God",
+    message: "Best fishing games in Malaysia. No lag, smooth gameplay. Customer service is excellent too!"
   },
   {
     id: 7,
-    name: 'Jessica C.',
-    avatar: 'https://i.pravatar.cc/150?u=jessica',
-    winAmount: 'MYR 12,050',
-    game: 'Mahjong Ways 2',
-    message: 'My favorite slot game pays out huge here. Truly 7-star service.'
+    name: "黄凯文",
+    avatar: "https://i.pravatar.cc/150?img=33",
+    winAmount: "MYR 12,050",
+    game: "Mahjong Ways 2",
+    message: "我最喜欢的老虎机游戏在这里支付巨额奖金。真正的7星级服务。每天都在玩！"
   },
   {
     id: 8,
-    name: 'Kenji O.',
-    avatar: 'https://i.pravatar.cc/150?u=kenji',
-    winAmount: 'MYR 5,600',
-    game: 'Sportsbook',
-    message: 'Great odds on EPL matches. Cashing out is super fast.'
+    name: "Hafiz Rahman",
+    avatar: "https://i.pravatar.cc/150?img=53",
+    winAmount: "MYR 5,600",
+    game: "Sportsbook",
+    message: "Best odds for EPL matches! Cashing out is super fast. Dah tukar dari platform lain, memang puas hati."
   },
   {
     id: 9,
-    name: 'Ahmed R.',
-    avatar: 'https://i.pravatar.cc/150?u=ahmed',
-    winAmount: 'MYR 41,000',
-    game: 'Mega888',
-    message: 'Jackpot winner! I thought it was fake but they paid me in 10 mins.'
+    name: "Priya Devi",
+    avatar: "https://i.pravatar.cc/150?img=47",
+    winAmount: "MYR 41,000",
+    game: "Mega888",
+    message: "Jackpot winner! I thought it was fake but they paid me in 10 minutes. Absolutely trustworthy platform!"
   },
 ];
+
 
 export const ACHIEVEMENTS: Achievement[] = [
   { id: 1, title: "Licensed", description: "Fully licensed by PAGCOR. We operate under strict international gaming regulations to ensure a safe environment.", icon: ShieldCheck },

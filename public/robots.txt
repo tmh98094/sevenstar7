@@ -1,0 +1,13 @@
+# Robots.txt for SevenStar7
+# https://sevenstar.services
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://sevenstar.services/sitemap.xml
+
+# Block common bot patterns for non-essential paths
+User-agent: *
+Disallow: /api/
+Disallow: /*.json$

@@ -4,7 +4,7 @@ import { Language, LanguageContextType, LanguageProviderProps } from '../transla
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 const STORAGE_KEY = 'sevenstar7_language';
-const DEFAULT_LANGUAGE: Language = 'en';
+const DEFAULT_LANGUAGE: Language = 'zh';
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>(DEFAULT_LANGUAGE);
@@ -23,7 +23,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
         }
       } catch (error) {
         console.warn('localStorage not available, trying sessionStorage:', error);
-        
+
         try {
           // Fallback to sessionStorage
           const sessionLanguage = sessionStorage.getItem(STORAGE_KEY) as Language;
@@ -35,7 +35,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
           console.warn('sessionStorage not available, using default language:', sessionError);
         }
       }
-      
+
       // Default to English if no valid stored language found
       setLanguageState(DEFAULT_LANGUAGE);
     };
@@ -49,7 +49,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       localStorage.setItem(STORAGE_KEY, lang);
     } catch (error) {
       console.warn('localStorage not available, trying sessionStorage:', error);
-      
+
       try {
         sessionStorage.setItem(STORAGE_KEY, lang);
       } catch (sessionError) {
@@ -65,13 +65,13 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     }
 
     setIsChanging(true);
-    
+
     debounceTimeoutRef.current = setTimeout(() => {
       if (lang !== 'en' && lang !== 'zh') {
         console.warn('Invalid language code:', lang, 'Defaulting to English');
         lang = DEFAULT_LANGUAGE;
       }
-      
+
       setLanguageState(lang);
       persistLanguage(lang);
       setIsChanging(false);

@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Star, Gift, ExternalLink, Users, BookOpen } from 'lucide-react';
+import { Star, Gift, ExternalLink, Users, Globe } from 'lucide-react';
 import { EXTERNAL_LINK } from '../constants';
 import { useTranslation } from '../src/hooks/useTranslation';
+import { useLanguageContext } from '../src/contexts/LanguageContext';
 
 const MobileBottomNav: React.FC = () => {
     const { t } = useTranslation();
     const location = useLocation();
+    const { language, toggleLanguage } = useLanguageContext();
 
     const navItems = [
         {
@@ -17,11 +19,12 @@ const MobileBottomNav: React.FC = () => {
             isExternal: false,
         },
         {
-            id: 'bonus',
-            label: 'Bonus',
-            icon: Gift,
-            path: EXTERNAL_LINK,
-            isExternal: true,
+            id: 'lang',
+            label: language === 'zh' ? '中/EN' : 'EN/中',
+            icon: Globe,
+            path: '#',
+            isExternal: false,
+            isLanguage: true,
         },
         {
             id: 'play',
@@ -32,17 +35,17 @@ const MobileBottomNav: React.FC = () => {
             isCenter: true,
         },
         {
+            id: 'bonus',
+            label: t('ui.bonus') || 'Bonus',
+            icon: Gift,
+            path: EXTERNAL_LINK,
+            isExternal: true,
+        },
+        {
             id: 'partner',
             label: t('nav.partner'),
             icon: Users,
             path: '/partner',
-            isExternal: false,
-        },
-        {
-            id: 'blog',
-            label: t('nav.blog'),
-            icon: BookOpen,
-            path: '/blog',
             isExternal: false,
         },
     ];
@@ -70,6 +73,21 @@ const MobileBottomNav: React.FC = () => {
                                     {item.label}
                                 </span>
                             </a>
+                        );
+                    }
+
+                    if (item.isLanguage) {
+                        return (
+                            <button
+                                key={item.id}
+                                onClick={toggleLanguage}
+                                className="flex flex-col items-center gap-1 py-1.5 w-full active:scale-95 transition-all text-brand-gold"
+                            >
+                                <Icon size={20} className="text-brand-gold" />
+                                <span className="text-[8px] font-black text-brand-gold uppercase tracking-tighter">
+                                    {item.label}
+                                </span>
+                            </button>
                         );
                     }
 

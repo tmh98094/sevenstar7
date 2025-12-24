@@ -49,11 +49,11 @@ export interface UITranslations {
   viewAll: string;
   loading: string;
   error: string;
-  
+
   // Navigation
   menu: string;
   close: string;
-  
+
   // Game Library
   allGames: string;
   games: string;
@@ -63,41 +63,65 @@ export interface UITranslations {
   popular: string;
   new: string;
   exclusive: string;
-  
+
   // Filters
   category: string;
   status: string;
   clearFilters: string;
-  
+
   // Game details
   rtp: string;
   volatility: string;
   maxWin: string;
-  
+
   // Volatility levels
   low: string;
   medium: string;
   high: string;
   veryHigh: string;
-  
+
   // Pagination
   previous: string;
   next: string;
   page: string;
   of: string;
-  
+
   // Common actions
   play: string;
   demo: string;
   info: string;
-  
+
   // Ready to win section
   readyToWin: string;
-  
+
   // Support info
   support24_7: string;
   malaysia: string;
   ageRestriction: string;
+
+  // Additional UI strings
+  bonus: string;
+  startWinning: string;
+  joinNow: string;
+  whyChoose: string;
+  officialPartners: string;
+  playerWins: string;
+  verifiedWinner: string;
+  latestNews: string;
+  readyToStart: string;
+  joinThousands: string;
+  commonQuestions: string;
+  exclusiveTitles: string;
+  onlyAvailable: string;
+  seeAll: string;
+  startWinningNow: string;
+  officialExclusivePartner: string;
+  higherRtp: string;
+  dailyTournaments: string;
+  arcadeMechanics: string;
+  completeCatalog: string;
+  gameLibrary: string;
+  exploreCollection: string;
 }
 
 export interface AchievementTranslations {
@@ -119,31 +143,31 @@ export interface FooterTranslations {
   navigation: string;
   playerSupport: string;
   authority: string;
-  
+
   // Navigation links
   home: string;
   exclusiveCrocoHub: string;
   liveCasino: string;
   slots: string;
   partnerProgram: string;
-  
+
   // Player support links
   accountSecurity: string;
   winningStrategies: string;
   bonusTerms: string;
   cryptoGuide: string;
   responsibleGaming: string;
-  
+
   // Authority section
   pagcorLicensed: string;
   officialPartner: string;
   encryptedRegulated: string;
-  
+
   // Security badges
   secure: string;
   private: string;
   licensed: string;
-  
+
   // Legal notice
   legalNotice: string;
   copyright: string;
