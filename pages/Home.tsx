@@ -305,7 +305,7 @@ const Home: React.FC = () => {
               <div className="relative rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl group">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5?q=80&w=1935&auto=format&fit=crop"
+                  src="/images/money.jpg"
                   alt="SevenStar7 Premium Gaming Experience"
                   className="w-full h-auto transform transition-transform duration-700 group-hover:scale-105"
                 />
@@ -314,8 +314,8 @@ const Home: React.FC = () => {
                 <div className="absolute bottom-8 left-8 right-8 z-20 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl">
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="text-brand-gold font-black text-2xl">98.5%</div>
-                      <div className="text-white text-xs uppercase font-bold tracking-wider">Average RTP</div>
+                      <div className="text-brand-gold font-black text-2xl">Instant</div>
+                      <div className="text-white text-xs uppercase font-bold tracking-wider">Withdrawals</div>
                     </div>
                     <div className="h-8 w-[1px] bg-white/20"></div>
                     <div>
@@ -345,7 +345,7 @@ const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-6">
             {ACHIEVEMENTS.map((item, index) => {
-              // Asymmetrical Layout: 
+              // Asymmetrical Layout:
               // First item: span 4 cols
               // Second item: span 2 cols
               // Third item: span 2 cols
@@ -405,7 +405,7 @@ const Home: React.FC = () => {
                   Exclusive <br /><span className="text-green-500">Croco Hub</span>
                 </h2>
                 <p className="text-gray-300 text-sm md:text-lg mb-8 leading-relaxed font-medium max-w-lg">
-                  SevenStar7 is the **exclusive authorized operator** for Croco Gaming. Experience the next generation of mobile slots with 98.5% RTP and instant jackpot payouts.
+                  SevenStar7 is the **exclusive authorized operator** for Croco Gaming. Experience the next generation of mobile slots with high RTP and instant jackpot payouts.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <TrackedLink href="/croco-exclusive" eventName="launch_croco_hub" className="inline-flex items-center gap-3 bg-white text-green-900 font-black uppercase tracking-widest text-xs py-4 px-10 rounded-xl shadow-xl hover:bg-green-50 transition-all transform hover:-translate-y-1 active:scale-95">
@@ -434,7 +434,7 @@ const Home: React.FC = () => {
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                     className="absolute -top-4 -right-4 bg-brand-gold text-black font-black text-[10px] px-3 py-1 rounded-full shadow-lg z-20 uppercase tracking-tighter"
                   >
-                    98.5% RTP
+                    High RTP
                   </motion.div>
                 </motion.div>
               </div>

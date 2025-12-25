@@ -194,7 +194,7 @@ export const enTranslations: Translations = {
       content: `
         <p class="mb-4 text-gray-400">Winning at slots isn't just about luck. It's about timing and understanding machine cycles. In Malaysia, players often find success by following a strictly regulated bankroll strategy.</p>
         <h3 class="text-xl font-black text-white mb-4 uppercase">1. Watch the RTP</h3>
-        <p class="mb-6 text-gray-400">Always choose games with RTP above 96%. Our Croco Gaming partnership offers up to 98.5% which is the highest in the market currently.</p>
+        <p class="mb-6 text-gray-400">Always choose games with RTP above 96%. Our Croco Gaming partnership offers up to High which is the highest in the market currently.</p>
         <h3 class="text-xl font-black text-white mb-4 uppercase">2. Bankroll Control</h3>
         <p class="mb-6 text-gray-400">Never bet more than 1% of your total balance on a single spin. Consistency wins over aggression.</p>
       `,

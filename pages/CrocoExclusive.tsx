@@ -50,7 +50,7 @@ const CrocoExclusive: React.FC = () => {
         <div className="bg-brand-black min-h-screen pt-20">
             <SEO
                 title="SevenStar7 x Croco Gaming | Exclusive Official Partner Malaysia"
-                description="Play exclusive Croco Gaming slots in Malaysia. 98.5% RTP, daily tournaments, and instant withdrawal. official partner link."
+                description="Play exclusive Croco Gaming slots in Malaysia. High RTP, daily tournaments, and instant withdrawal. official partner link."
                 schema={structuredData}
             />
 

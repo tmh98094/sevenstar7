@@ -194,7 +194,7 @@ export const zhTranslations: Translations = {
       content: `
         <p class="mb-4 text-gray-400">在老虎机中获胜不仅仅是运气。这关乎时机和理解机器周期。在马来西亚，玩家通过遵循严格规范的资金管理策略经常获得成功。</p>
         <h3 class="text-xl font-black text-white mb-4 uppercase">1. 关注RTP</h3>
-        <p class="mb-6 text-gray-400">始终选择RTP超过96%的游戏。我们与鳄鱼游戏的合作伙伴关系提供高达98.5%的回报率，这是目前市场上最高的。</p>
+        <p class="mb-6 text-gray-400">始终选择RTP超过96%的游戏。我们与鳄鱼游戏的合作伙伴关系提供高达高回报率，这是目前市场上最高的。</p>
         <h3 class="text-xl font-black text-white mb-4 uppercase">2. 资金控制</h3>
         <p class="mb-6 text-gray-400">单次旋转的投注金额永远不要超过总余额的1%。一致性胜过激进。</p>
       `,
