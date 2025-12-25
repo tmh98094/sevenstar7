@@ -304,6 +304,13 @@ export const enTranslations: Translations = {
     pagcorLicensed: 'PAGCOR Licensed',
     bmmAudited: 'BMM Audited',
     fastWithdrawals: '3-Min Withdrawals',
+    aboutTitle: 'About SevenStar Malaysia',
+    aboutSubtitle: 'Your Trusted Partner in Premium Online Casino Entertainment',
+    aboutDesc1: 'SevenStar Malaysia (SevenStar7) is an officially licensed online casino dedicated to providing a secure, fair, and premium gambling experience for Malaysian players. Established with a vision to revolutionize the digital casino landscape, we combine cutting-edge technology with local expertise to deliver a service that is both world-class and distinctly Malaysian.',
+    aboutDesc2: 'Unlike generic aggregators or logistic companies, SevenStar7 focuses exclusively on high-end casino products. As the official partner of Croco Gaming, we offer exclusive access to high-RTP slots and arcade games that you cannot find anywhere else. Our commitment to integrity is backed by international certifications from BMM Testlabs and PAGCOR licensure.',
+    aboutPoint1: 'Official Licensee',
+    aboutPoint2: 'MYR Payment Gateway',
+    aboutPoint3: '24/7 Local Support',
   },
 
   achievements: {

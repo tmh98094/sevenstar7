@@ -304,6 +304,13 @@ export const zhTranslations: Translations = {
     pagcorLicensed: 'PAGCOR 授权',
     bmmAudited: 'BMM 审计',
     fastWithdrawals: '3分钟快速提款',
+    aboutTitle: '关于 SevenStar 马来西亚',
+    aboutSubtitle: '您值得信赖的高级数字娱乐合作伙伴',
+    aboutDesc1: 'SevenStar 马来西亚 (SevenStar7) 是一个官方授权的在线游戏平台，致力于为马来西亚玩家提供安全、公平和高级的娱乐体验。我们要彻底改变数字游戏格局，通过结合尖端技术和本地专业知识，提供世界级且具有马来西亚特色的服务。',
+    aboutDesc2: '与通用聚合器或物流公司不同，SevenStar7 专注于高端游戏产品。作为 Croco Gaming 的官方合作伙伴，我们提供独家的高回报率老虎机和街机游戏。我们对诚信的承诺得到了 BMM Testlabs 和 PAGCOR 许可的国际认证支持。',
+    aboutPoint1: '官方授权',
+    aboutPoint2: 'MYR 支付网关',
+    aboutPoint3: '24/7 本地支持',
   },
 
   achievements: {

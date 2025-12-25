@@ -148,6 +148,15 @@ export interface UITranslations {
   pagcorLicensed: string;
   bmmAudited: string;
   fastWithdrawals: string;
+
+  // About Section
+  aboutTitle: string;
+  aboutSubtitle: string;
+  aboutDesc1: string;
+  aboutDesc2: string;
+  aboutPoint1: string;
+  aboutPoint2: string;
+  aboutPoint3: string;
 }
 
 export interface AchievementTranslations {

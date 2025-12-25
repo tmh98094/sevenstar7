@@ -108,7 +108,22 @@ const Home: React.FC = () => {
 
   return (
     <div className="bg-brand-black min-h-screen">
-      <SEO />
+      <SEO
+        title="Sevenstar7 - Malaysia's #1 Online Casino | Sevenstar Gambling Official"
+        description="SevenStar7 is the official trusted Sevenstar Casino in Malaysia. Join Sevenstar7 Malaysia for exclusive high RTP slots, live casino, and sports betting. The ultimate Sevenstar Gambling experience."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": FAQS.map(faq => ({
+            "@type": "Question",
+            "name": faq.q,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.a
+            }
+          }))
+        }}
+      />
       <GameDetailModal game={selectedGame} onClose={() => setSelectedGame(null)} />
 
       {/* Hero Section */}
@@ -223,6 +238,95 @@ const Home: React.FC = () => {
               <span key={i} className="text-base md:text-xl font-display font-bold text-white whitespace-nowrap mx-4 opacity-40 hover:opacity-100 transition-opacity cursor-default">{p}</span>
             ))}
           </AutoScroll>
+        </div>
+      </section>
+
+      {/* NEW: About SevenStar Section (Entity Authority) */}
+      <section className="py-20 bg-brand-black relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[80px] pointer-events-none"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="w-full lg:w-1/2"
+            >
+              <div className="flex items-center gap-2 mb-6">
+                <span className="w-12 h-[2px] bg-brand-gold"></span>
+                <span className="text-brand-gold font-bold uppercase tracking-widest text-xs">SevenStar Official</span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-display font-black text-white mb-6 leading-tight">
+                {t('ui.aboutTitle')}
+              </h2>
+              <h3 className="text-xl text-gray-300 font-bold mb-6">
+                {t('ui.aboutSubtitle')}
+              </h3>
+              <div className="space-y-6 text-gray-400 leading-relaxed text-sm md:text-base text-justify">
+                <p>
+                  {t('ui.aboutDesc1')}
+                </p>
+                <p>
+                  {t('ui.aboutDesc2')}
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <span className="text-sm font-bold text-white">{t('ui.aboutPoint1')}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400">
+                    <BadgeCheck size={20} />
+                  </div>
+                  <span className="text-sm font-bold text-white">{t('ui.aboutPoint2')}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-400">
+                    <Users size={20} />
+                  </div>
+                  <span className="text-sm font-bold text-white">{t('ui.aboutPoint3')}</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="w-full lg:w-1/2 relative"
+            >
+              <div className="relative rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl group">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
+                <img
+                  src="https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5?q=80&w=1935&auto=format&fit=crop"
+                  alt="SevenStar7 Premium Gaming Experience"
+                  className="w-full h-auto transform transition-transform duration-700 group-hover:scale-105"
+                />
+
+                {/* Float Card */}
+                <div className="absolute bottom-8 left-8 right-8 z-20 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-brand-gold font-black text-2xl">98.5%</div>
+                      <div className="text-white text-xs uppercase font-bold tracking-wider">Average RTP</div>
+                    </div>
+                    <div className="h-8 w-[1px] bg-white/20"></div>
+                    <div>
+                      <div className="text-brand-gold font-black text-2xl">50k+</div>
+                      <div className="text-white text-xs uppercase font-bold tracking-wider">Active Players</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 

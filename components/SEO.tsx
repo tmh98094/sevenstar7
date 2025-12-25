@@ -12,36 +12,59 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-    title = "SevenStar7 - 马来西亚官方在线娱乐场 | Croco Gaming独家合作伙伴",
-    description = "加入SevenStar7，马来西亚Croco Gaming授权合作伙伴。享受98.5%高回报率老虎机、3分钟快速提款、安全可靠的7星级游戏体验。Join SevenStar7, the authorized partner for Croco Gaming in Malaysia.",
+    title = "SevenStar7 - Malaysia's Official Online Casino | SevenStar Gambling",
+    description = "SevenStar7 is Malaysia's trusted Sevenstar Casino and Gambling platform. Exclusive partner of Croco Gaming. Join Sevenstar Malaysia for high RTP slots and live casino action.",
     canonicalUrl,
     ogImage = "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?q=80&w=2070&auto=format&fit=crop",
     ogType = 'website',
     schema,
-    keywords = "SevenStar7, 马来西亚在线娱乐场, Croco Gaming, 老虎机, 真人娱乐场, 体育博彩, Malaysia Casino, Online Slots, Live Casino, Sports Betting, 918Kiss, Mega888, Pragmatic Play, JILI"
+    keywords = "Sevenstar Malaysia, Sevenstar Casino, Sevenstar Gambling, Sevenstar7, Sevenstar7 Malaysia, Sevenstar7 Casino, Malaysia Online Casino, Trusted Gambling Platform"
 }) => {
     const siteUrl = 'https://sevenstar.services';
     const fullCanonical = canonicalUrl ? (canonicalUrl.startsWith('http') ? canonicalUrl : `${siteUrl}${canonicalUrl}`) : siteUrl;
 
     const defaultSchema = {
         "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SevenStar7",
+        "legalName": "SevenStar7 Casino Malaysia",
+        "alternateName": [
+            "Sevenstar Malaysia",
+            "Sevenstar Casino",
+            "Sevenstar Gambling",
+            "Sevenstar7",
+            "Sevenstar7 Malaysia",
+            "Sevenstar7 Casino"
+        ],
+        "url": siteUrl,
+        "logo": `${siteUrl}/images/favico.png`,
+        "description": description,
+        "sameAs": [
+            "https://web.facebook.com/profile.php?id=61581042925455",
+            "https://twitter.com/sevenstar7",
+            "https://www.instagram.com/sevenstar7"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "areaServed": "MY",
+            "availableLanguage": ["en", "ms", "zh"]
+        }
+    };
+
+    const websiteSchema = {
+        "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "SevenStar7",
-        "alternateName": "七星娱乐",
+        "alternateName": "SevenStar Malaysia",
         "url": siteUrl,
-        "description": description,
         "potentialAction": {
             "@type": "SearchAction",
-            "target": `${siteUrl}/?s={search_term_string}`,
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": `${siteUrl}/?s={search_term_string}`
+            },
             "query-input": "required name=search_term_string"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "SevenStar7",
-            "logo": {
-                "@type": "ImageObject",
-                "url": `${siteUrl}/images/favico.png`
-            }
         }
     };
 
@@ -62,8 +85,8 @@ const SEO: React.FC<SEOProps> = ({
             <meta property="og:url" content={fullCanonical} />
             <meta property="og:type" content={ogType} />
             <meta property="og:site_name" content="SevenStar7" />
-            <meta property="og:locale" content="zh_CN" />
-            <meta property="og:locale:alternate" content="en_MY" />
+            <meta property="og:locale" content="en_MY" />
+            <meta property="og:locale:alternate" content="zh_CN" />
 
             {/* Twitter Card */}
             <meta name="twitter:card" content="summary_large_image" />
@@ -73,7 +96,7 @@ const SEO: React.FC<SEOProps> = ({
 
             {/* Structured Data */}
             <script type="application/ld+json">
-                {JSON.stringify(schema || defaultSchema)}
+                {JSON.stringify(schema ? [defaultSchema, websiteSchema, schema] : [defaultSchema, websiteSchema])}
             </script>
         </Helmet>
     );

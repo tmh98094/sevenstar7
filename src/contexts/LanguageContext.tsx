@@ -4,7 +4,7 @@ import { Language, LanguageContextType, LanguageProviderProps } from '../transla
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 const STORAGE_KEY = 'sevenstar7_language';
-const DEFAULT_LANGUAGE: Language = 'zh';
+const DEFAULT_LANGUAGE: Language = 'en';
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>(DEFAULT_LANGUAGE);

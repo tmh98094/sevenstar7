@@ -91,7 +91,7 @@ const Header: React.FC = () => {
           </nav>
 
           {/* Action Buttons */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-3">
             {/* Language Toggle - All Screens */}
             <div className="block">
               <LanguageToggle variant="header" />
@@ -101,11 +101,10 @@ const Header: React.FC = () => {
               href={EXTERNAL_LINK}
               target="_blank"
               rel="noreferrer"
-              className="px-4 md:px-6 py-2.5 rounded-xl font-black text-xs md:text-xs shadow-xl flex items-center gap-2 active:scale-95 transition-all uppercase tracking-widest gold-btn-gradient text-brand-black border border-brand-gold/20 hover:shadow-brand-gold/30"
+              className="px-2.5 sm:px-4 md:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl font-black text-[10px] sm:text-xs shadow-xl flex items-center gap-1 sm:gap-2 active:scale-95 transition-all uppercase tracking-wider sm:tracking-widest gold-btn-gradient text-brand-black border border-brand-gold/20 hover:shadow-brand-gold/30"
             >
-              <span className="hidden sm:inline">{t('ui.playNow')}</span>
-              <span className="sm:hidden">{t('ui.playNow')}</span>
-              <Gamepad2 size={14} strokeWidth={3} />
+              <span>{t('ui.play')}</span>
+              <Gamepad2 size={14} strokeWidth={3} className="hidden xs:block" />
             </a>
 
             <button
@@ -113,7 +112,7 @@ const Header: React.FC = () => {
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open Navigation"
             >
-              <Menu size={24} />
+              <Menu size={20} />
             </button>
           </div>
         </div>
