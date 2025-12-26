@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Calendar, User, Clock, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { BLOG_POSTS, EXTERNAL_LINK } from '../constants';
 import { useTranslation } from '../src/hooks/useTranslation';
+import SEO from '../components/SEO';
 
 const BlogList: React.FC = () => {
     const { t } = useTranslation();
@@ -31,6 +32,12 @@ const BlogList: React.FC = () => {
 
     return (
         <div className="bg-brand-black min-h-screen pt-20 pb-24 lg:pb-12">
+            <SEO
+                title="Casino Guides & Winning Strategies | SevenStar7 Blog Malaysia"
+                description="Expert casino guides, slot strategies, and betting tips from Malaysia's trusted online casino. Learn how to win at slots, baccarat, and sports betting."
+                keywords="Casino Guides Malaysia, Slot Strategy, Baccarat Tips, Betting Guide, SevenStar7 Blog"
+                canonicalUrl="/blog"
+            />
 
             {/* Header */}
             <div className="bg-brand-dark py-12 md:py-16 border-b border-white/5">

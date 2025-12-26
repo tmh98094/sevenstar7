@@ -3,6 +3,7 @@ import { Gamepad2, Search, Filter, Flame, Sparkles, ChevronLeft, ChevronRight } 
 import { FEATURED_GAMES, GAME_CATEGORIES, CROCO_GAMES, SLOT_GAMES, SLOT_PROVIDERS, LIVE_GAMES, SPORTS_GAMES } from '../constants';
 import GameShowcaseCard from '../components/GameShowcaseCard';
 import { useTranslation } from '../src/hooks/useTranslation';
+import SEO from '../components/SEO';
 
 const GameLibrary: React.FC = () => {
     const { t } = useTranslation();
@@ -97,6 +98,12 @@ const GameLibrary: React.FC = () => {
 
     return (
         <div className="bg-brand-black min-h-screen pt-24 pb-20">
+            <SEO
+                title="All Casino Games Malaysia | 500+ Slots, Live Casino & Sports - SevenStar7"
+                description="Browse 500+ casino games including exclusive Croco slots, live baccarat, roulette, and sports betting. Play now on Malaysia's trusted platform."
+                keywords="Casino Games Malaysia, Online Slots, Live Casino, Sports Betting, SevenStar7 Games"
+                canonicalUrl="/games"
+            />
             <div className="container mx-auto px-4">
 
                 {/* Header */}

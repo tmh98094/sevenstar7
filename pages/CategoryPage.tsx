@@ -4,6 +4,7 @@ import { GAME_CATEGORIES, FEATURED_GAMES, EXTERNAL_LINK } from '../constants';
 import GameShowcaseCard from '../components/GameShowcaseCard';
 import { CheckCircle, Play } from 'lucide-react';
 import { useTranslation } from '../src/hooks/useTranslation';
+import SEO from '../components/SEO';
 
 const CategoryPage: React.FC = () => {
     const { t } = useTranslation();
@@ -34,6 +35,12 @@ const CategoryPage: React.FC = () => {
 
     return (
         <div className="bg-brand-black min-h-screen pt-20">
+            <SEO
+                title={`${data.title} Games Malaysia | Best ${data.title} Online - SevenStar7`}
+                description={`Play the best ${data.title} games in Malaysia. ${data.description} High RTP, instant withdrawals. Official SevenStar7.`}
+                keywords={`${data.title} Malaysia, ${data.title} Online, Best ${data.title}, SevenStar7 ${data.title}`}
+                canonicalUrl={`/${categoryId}`}
+            />
 
             {/* Category Hero */}
             <div className="relative h-[60vh] flex items-center">

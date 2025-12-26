@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Calendar, User, Clock, ArrowLeft, Share2, Facebook, Twitter, Linkedin, ChevronLeft } from 'lucide-react';
 import { BLOG_POSTS, EXTERNAL_LINK } from '../constants';
 import { useTranslation } from '../src/hooks/useTranslation';
+import SEO from '../components/SEO';
 
 const BlogDetail: React.FC = () => {
     const { t } = useTranslation();
@@ -30,8 +31,40 @@ const BlogDetail: React.FC = () => {
         return post;
     })();
 
+    const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": translatedPost.title,
+        "description": translatedPost.excerpt,
+        "image": post.imageUrl,
+        "author": {
+            "@type": "Person",
+            "name": post.author
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "SevenStar7",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://sevenstar.services/images/favico.png"
+            }
+        },
+        "datePublished": post.date,
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://sevenstar.services/blog/${blogId}`
+        }
+    };
+
     return (
         <div className="bg-brand-black min-h-screen pt-16 md:pt-20 pb-24 lg:pb-12">
+            <SEO
+                title={`${translatedPost.title} | SevenStar7 Casino Guides`}
+                description={translatedPost.excerpt || `Read ${translatedPost.title} - Expert casino guide from SevenStar7 Malaysia.`}
+                ogType="article"
+                canonicalUrl={`/blog/${blogId}`}
+                schema={articleSchema}
+            />
 
             {/* Back Button for Mobile - Floats or fixed at top left */}
             <div className="container mx-auto px-4 py-4">
